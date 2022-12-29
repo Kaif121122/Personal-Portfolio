@@ -24,6 +24,12 @@ background-color:${({ theme }) => theme.colors.topcolor};
     height: auto;
     display:block;
     margin-left: auto;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+
+.hero-img:hover{
+  transform:scale(0.95)
 }
 
 

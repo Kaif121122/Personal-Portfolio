@@ -1,17 +1,17 @@
 import React, { useContext, useReducer, useEffect } from "react";
 import { reducer } from "./reducer";
-import HomeImg from "../../public/images/christopher-gower-m_HRfLhgABo-unsplash.jpg"
-import AboutImg from "../../public/images/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
+import HomeImg from "../../public/images/IMG_20221228_151627.jpg"
+import AboutImg from "../../public/images/IMG_20221228_214818.jpg"
 
 const AppContext = React.createContext();
 
 const initialState = {
-    firstPara:'',
-    secondPara:'',
+    firstPara: '',
+    secondPara: '',
     name: '',
     image: '',
     cards: [],
-    isLoading:''
+    isLoading: ''
 }
 
 const API = 'https://wild-pink-marlin-vest.cyclic.app/service'
@@ -24,9 +24,9 @@ const AppProvider = ({ children }) => {
 
         dispatch({
             type: "GET_LOADPAGE",
-                toLoad: {
-                    isLoading:true
-                }
+            toLoad: {
+                isLoading: true
+            }
         })
 
         try {
@@ -36,7 +36,7 @@ const AppProvider = ({ children }) => {
                 type: "GET_SERVICEPAGE",
                 toLoad: {
                     cards: data,
-                    isLoading:false
+                    isLoading: false
                 }
             })
 
@@ -56,8 +56,8 @@ const AppProvider = ({ children }) => {
         dispatch({
             type: "GET_HOMEPAGE",
             toLoad: {
-                firstPara:'Hello, My name is',
-                secondPara:'I am a Web developer!',
+                firstPara: 'Hello, My name is',
+                secondPara: 'I am a Web developer!',
                 name: 'Md kaif ansari',
                 image: HomeImg
 
@@ -68,8 +68,8 @@ const AppProvider = ({ children }) => {
         dispatch({
             type: "GET_ABOUTPAGE",
             toLoad: {
-                firstPara:'I create successful responsive websites that are fast, easy to use, and build with best practices.',
-                secondPara:'The main area of my expertise is front-end development.',
+                firstPara: 'I create successful responsive websites that are fast, easy to use, and build with best practices.',
+                secondPara: 'The main area of my expertise is front-end development.',
                 name: 'front-end developer',
                 image: AboutImg
 

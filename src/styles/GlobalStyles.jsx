@@ -85,7 +85,7 @@ li{
 }
 
 .grid-four-column{
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
 }
 
 .common-heading{

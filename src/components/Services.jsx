@@ -10,10 +10,10 @@ padding: 2% 15%;
 
 .card{
   border-radius:5px;
-  padding: 1rem;
+  padding: 1rem 1rem 2rem;
   text-align: center;
   border:0.1rem solid rgb(170 170 170 /40%);
-  background-color:white
+  background-color:white;
 }
 
 figure{
@@ -41,11 +41,17 @@ figure{
 
 .card-img{
   max-width:100%;
-  height: auto;
+  height: 18rem;
 }
+
 .card-title{
   margin-top:1rem;
 }
+
+.card-description{
+  padding:1rem 0;
+}
+
 .loading-container{
   display: flex;
   justify-content: center;

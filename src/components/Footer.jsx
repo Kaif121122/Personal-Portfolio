@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button } from '../styles/Button'
-import { FaFacebookSquare, FaInstagram, FaYoutubeSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaGithub } from "react-icons/fa";
 const Wrapper = styled.section`
 
 .pad-container{
@@ -40,6 +40,11 @@ padding-top:5%;
 opacity: 0.8;
     transform: scale(0.96);
   }
+}
+
+.social-links{
+  text-decoration:none;
+  color:white;
 }
 .icons{
   font-size: 3rem;
@@ -112,12 +117,11 @@ const Footer = () => {
             <div className="footer-social">
               <h3 className='pad-btm'>Follow Us</h3>
               <div className="flex">
+                <div className="icons-div"><a className='social-links' href="https://www.facebook.com/profile.php?id=100009195231164" target="_blank"><FaFacebookSquare className='icons' /></a></div>
                 <div className="icons-div">
-                  <FaFacebookSquare className='icons' /></div>
+                  <a className='social-links' href='https://www.instagram.com/mdkaifansari999' target='_blank'><FaInstagram className='icons' /></a></div>
                 <div className="icons-div">
-                  <FaInstagram className='icons' /></div>
-                <div className="icons-div">
-                  <FaYoutubeSquare className='icons' /></div>
+                  <a className='social-links' href='https://github.com/Kaif121122' target='_blank'> <FaGithub className='icons' /></a></div>
               </div>
             </div>
             <div className="footer-contact">
