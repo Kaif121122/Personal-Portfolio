@@ -55,15 +55,22 @@ opacity: 0.8;
 .pad-btm{
 padding-bottom:1rem;
 }
+
+.common-footer-para{
+font-size: 2rem;
+}
+
  hr{
   height: 2px;
   background-color:white;
 }
+
 .footer-bottom-container{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .text-white{
 color:${({ theme }) => theme.colors.topcolor};
 opacity: 1;
@@ -104,18 +111,18 @@ const Footer = () => {
         <div className="pad-container">
           <div className="container grid grid-four-column footer-container">
             <div className="footer-about">
-              <h3 className='pad-btm'>Md Kaif Ansari</h3>
-              <p className='text-white'>Web developer</p>
+              <h3 className='pad-btm common-footer-para'>Md Kaif Ansari</h3>
+              <p className='text-white common-footer-para'>Web developer</p>
             </div>
             <div className="footer-subscribe">
-              <h3 className='pad-btm'>Subscribe to get important updates</h3>
+              <h3 className='pad-btm common-footer-para'>Subscribe to get important updates</h3>
               <form action="#">
                 <input type="email" name="email" placeholder='Email' autoComplete='off' required />
                 <Button type='submit' className='footer-submit-btn'>Subscribe</Button>
               </form>
             </div>
             <div className="footer-social">
-              <h3 className='pad-btm'>Follow Us</h3>
+              <h3 className='pad-btm common-footer-para'>Follow Us</h3>
               <div className="flex">
                 <div className="icons-div"><a className='social-links' href="https://www.facebook.com/profile.php?id=100009195231164" target="_blank"><FaFacebookSquare className='icons' /></a></div>
                 <div className="icons-div">
@@ -125,8 +132,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-contact">
-              <h3 className='pad-btm'>Call us</h3>
-              <h3>+91 8092415273</h3>
+              <h3 className='pad-btm common-footer-para'>Call us</h3>
+              <h3 common-footer-para>+91 8092415273</h3>
             </div>
           </div>
         </div>

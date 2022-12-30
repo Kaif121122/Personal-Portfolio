@@ -46,10 +46,12 @@ figure{
 
 .card-title{
   margin-top:1rem;
+  font-size:1.8rem ;
 }
 
 .card-description{
   padding:1rem 0;
+  font-size:1.5rem ;
 }
 
 .loading-container{
