@@ -4,10 +4,8 @@ import { useGlobalContext } from '../context/context'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-max-width: 120rem;
-margin: 0 auto;
-padding: 2% 15%;
-  background-color:${({ theme }) => theme.colors.secondcolor};
+  padding: 2% 5%;
+  background-color:${({ theme }) => theme.colors.light_Black_color};
 
   .skills-ul{
     display: grid;
@@ -15,14 +13,16 @@ padding: 2% 15%;
     text-align:center;
     gap:1rem;
   }
-.skills-name{
-  font-size:3rem;
-text-transform:capitalize;
-cursor: pointer;
 
-transition:all 0.3s ease;
+ .skills-name{
+  font-size:3rem;
+  text-transform:capitalize;
+  cursor: pointer;
+  color:${({ theme }) => theme.colors.grey_color};
+  transition:all 0.3s ease;
 }
-.skills-name:hover{
+
+ .skills-name:hover{
   transform:scale(0.95)
 }
 `
@@ -37,12 +37,12 @@ const About = () => {
   }, [])
 
 
-  return (<>
+  return <>
 
     <HeroSection
     />
     <Wrapper>
-
+<div className="container">
       <h2 className='common-heading'>My Skills</h2>
       <div className="skills-container">
         <ul className="skills-ul">
@@ -58,10 +58,10 @@ const About = () => {
           <li className="skills-name">ejs</li>
           <li className="skills-name">mongodb</li>
         </ul>
-      </div>
+      </div></div>
     </Wrapper>
   </>
-  )
+  
 }
 
 export default About

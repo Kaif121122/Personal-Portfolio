@@ -11,14 +11,14 @@ const NavBar = styled.nav`
 
     li{
         a{
-            color: black;
+            color:${({ theme }) => theme.colors.teal_color};
             font-size:1.75rem;
             text-transform:uppercase;
             padding: 2rem 0;
             
             &:hover
             {
-                color: ${({ theme }) => theme.colors.fourthcolor};
+                opacity:0.8;
                 
             }
             
@@ -27,8 +27,8 @@ const NavBar = styled.nav`
     }
 }
     .active{
-        color: ${({ theme }) => theme.colors.fourthcolor} !important;
-                border-bottom:2px solid;
+               color:${({ theme }) => theme.colors.teal_color} !important;
+                border-bottom:2px solid ${({ theme }) => theme.colors.teal_color};
             }
 
             .menu-btns{
@@ -43,15 +43,16 @@ const NavBar = styled.nav`
                 .menu-btns{
                     display:inline-block;
                     z-index: 999;
-
                    
                 }
                 .menu-icons{
-                        font-size:4.2rem;
-                        position: absolute;
-                    top:2.5%;
-                    right: 7%;
+                    font-size:4.2rem;
+                    position: absolute;
+                    color:${({ theme }) => theme.colors.teal_color};
+                    top:35%;
+                    right: 5%;
                     z-index: 9999;
+                    cursor: pointer;
                     }
 
                 .navbar-ul{
@@ -60,7 +61,7 @@ const NavBar = styled.nav`
                     right: 0;
                     width:0px;
                     height: 0px;
-                    background-color:white;
+                    background-color:${({ theme }) => theme.colors.dark_Black_color};
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -124,7 +125,7 @@ const Navbar = () => {
                 <ul className={openMenu ? 'mob-navbar-ul navbar-ul' : 'navbar-ul'}>
                     <li><NavLink onClick={openNav} end to='/'>Home</NavLink></li>
                     <li><NavLink onClick={openNav} to='/about'>About</NavLink></li>
-                    <li><NavLink onClick={openNav} to='/services'>Services</NavLink></li>
+                    <li><NavLink onClick={openNav} to='/services'>Projects</NavLink></li>
                     <li><NavLink onClick={openNav} to='/contact'>Contact</NavLink></li>
                 </ul>
                 <div className="menu-btns">

@@ -7,7 +7,7 @@ const Wrapper = styled.section`
 
 .pad-container{
 
-  padding: 1% 15%;
+  padding: 1% 5%;
 }
 
 .footer-top-contact{
@@ -15,15 +15,18 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
   align-items:center;
-  background-color:white;
+  background-color:${({ theme }) => theme.colors.light_Black_color};
+  color:${({ theme }) => theme.colors.grey_color};
   transform:translateY(65%);
 }
+
 .footer-contact-btn{
   margin-top:0;
 }
+
 footer{
-color:${({ theme }) => theme.colors.topcolor};
-background-color:${({ theme }) => theme.colors.fourthcolor};
+color:${({ theme }) => theme.colors.dark_Black_color};
+background-color:${({ theme }) => theme.colors.grey_color};
 padding-top:5%;
 }
 .flex{
@@ -32,7 +35,7 @@ padding-top:5%;
 }
 .icons-div{
   padding: 0.5rem 0.5rem 0.3rem;
-  background-color:#343e74;
+  background-color:${({ theme }) => theme.colors.teal_color};
   border-radius:5px;
 
   &:hover{
@@ -58,11 +61,12 @@ padding-bottom:1rem;
 
 .common-footer-para{
 font-size: 2rem;
+color:${({ theme }) => theme.colors.dark_Black_color};
 }
 
  hr{
   height: 2px;
-  background-color:white;
+  background-color:${({ theme }) => theme.colors.dark_Black_color};
 }
 
 .footer-bottom-container{
@@ -72,7 +76,7 @@ font-size: 2rem;
 }
 
 .text-white{
-color:${({ theme }) => theme.colors.topcolor};
+color:${({ theme }) => theme.colors.dark_Black_color};
 opacity: 1;
 }
 
@@ -109,18 +113,14 @@ const Footer = () => {
 
       <footer>
         <div className="pad-container">
-          <div className="container grid grid-four-column footer-container">
+          <div className="container flex-center footer-container">
+
             <div className="footer-about">
               <h3 className='pad-btm common-footer-para'>Md Kaif Ansari</h3>
               <p className='text-white common-footer-para'>Web developer</p>
             </div>
-            <div className="footer-subscribe">
-              <h3 className='pad-btm common-footer-para'>Subscribe to get important updates</h3>
-              <form action="#">
-                <input type="email" name="email" placeholder='Email' autoComplete='off' required />
-                <Button type='submit' className='footer-submit-btn'>Subscribe</Button>
-              </form>
-            </div>
+
+
             <div className="footer-social">
               <h3 className='pad-btm common-footer-para'>Follow Us</h3>
               <div className="flex">
@@ -131,10 +131,13 @@ const Footer = () => {
                   <a className='social-links' href='https://github.com/Kaif121122' target='_blank'> <FaGithub className='icons' /></a></div>
               </div>
             </div>
+
+
             <div className="footer-contact">
               <h3 className='pad-btm common-footer-para'>Call us</h3>
               <h3 common-footer-para>+91 8092415273</h3>
             </div>
+
           </div>
         </div>
         <hr />

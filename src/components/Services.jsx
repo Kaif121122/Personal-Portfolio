@@ -5,15 +5,15 @@ import { Button } from '../styles/Button'
 
 const Wrapper = styled.section`
 
-padding: 2% 15%;
-  background-color:${({ theme }) => theme.colors.topcolor};
+  padding: 2% 5%;
+  background-color:${({ theme }) => theme.colors.light_Black_color};
+
 
 .card{
   border-radius:5px;
   padding: 1rem 1rem 2rem;
   text-align: center;
-  border:0.1rem solid rgb(170 170 170 /40%);
-  background-color:white;
+  background-color:${({ theme }) => theme.colors.dark_Black_color};
 }
 
 figure{
@@ -42,16 +42,19 @@ figure{
 .card-img{
   max-width:100%;
   height: 18rem;
+  filter:grayscale(0.7);
 }
 
 .card-title{
   margin-top:1rem;
   font-size:1.8rem ;
+  color:${({ theme }) => theme.colors.grey_color};
 }
 
 .card-description{
   padding:1rem 0;
-  font-size:1.5rem ;
+  font-size:1.5rem;
+  color:${({ theme }) => theme.colors.grey_color};
 }
 
 .loading-container{
@@ -59,7 +62,8 @@ figure{
   justify-content: center;
   align-items: center;
   height: 20vh;
-  background-color:${({ theme }) => theme.colors.thirdcolor};
+  background-color:${({ theme }) => theme.colors.dark_Black_color};
+  color:${({ theme }) => theme.colors.grey_color};
 }
 `
 
@@ -73,7 +77,7 @@ const Services = () => {
 
 
     <Wrapper>
-      <h2 className='common-heading'>Our Services</h2>
+      <h2 className='common-heading'>My Projects</h2>
       {isLoading ? <h3 className="container loading-container">
         Loading...
       </h3> : <div className='container grid grid-four-column'>

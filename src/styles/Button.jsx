@@ -5,10 +5,10 @@ export const Button = styled.button`
 font-family: 'Montserrat', sans-serif;
 text-decoration:none;
 max-width: auto;
-background-color:#343e74;
-color: white;
+  background-color:${({ theme }) => theme.colors.teal_color};
+color: ${({ theme }) => theme.colors.grey_color};
+border: none;
 padding: 1.4rem 2.4rem;
-border: none; 
 text-transform:uppercase;
 text-align: center;
 margin-top:1.5rem;
@@ -24,6 +24,6 @@ opacity: 0.5;
     transform: scale(0.96);
 }
 a{
-    color:white;
+    color:${({ theme }) => theme.colors.grey_color};
 }
 `

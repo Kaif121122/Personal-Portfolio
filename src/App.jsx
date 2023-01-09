@@ -11,13 +11,14 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './styles/GlobalStyles'
 import GoToTop from './components/GoToTop'
 
+
 const App = () => {
   const theme = {
     colors: {
-      topcolor: '#F5EFE6',
-      secondcolor: '#E8DFCA',
-      thirdcolor: '#AEBDCA',
-      fourthcolor: '#7895B2',
+      dark_Black_color: '#222831',
+      light_Black_color: '#393E46',
+      teal_color: '#00ADB5',
+      grey_color: '#EEEEEE',
     },
     media: {
       mobile: '768px',

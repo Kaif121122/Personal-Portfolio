@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { Button } from '../styles/Button'
 
 const Wrapper = styled.section`
-padding-top: 3%;
+
+background-color:${({ theme }) => theme.colors.light_Black_color};
 
 .contact-form{
   display:flex;
@@ -20,6 +21,7 @@ padding-top: 3%;
    gap: 2rem;
     
   }
+
 
   .send-btn{
     width: 30%;
@@ -52,9 +54,9 @@ const Contact = () => {
       <div className="container">
         <div className="contact-form">
           <form action="https://formspree.io/f/xjvzojdv" method='POST' className='form'>
-            <input type="text" name='username' placeholder='Username' autoComplete='off' required />
-            <input type="email" name='email' placeholder='Email' autoComplete='off' required />
-            <textarea name='message' cols="30" rows="6" placeholder='Enter your message...' autoComplete='off' required />
+            <input type="text" name='username' className='common-inputs' placeholder='Username' autoComplete='off' required />
+            <input type="email" name='email' className='common-inputs' placeholder='Email' autoComplete='off' required />
+            <textarea name='message' cols="30" className='common-inputs' rows="6" placeholder='Enter your message...' autoComplete='off' required />
             <Button type='submit' className='send-btn'>send</Button>
           </form>
         </div>

@@ -20,29 +20,32 @@ html{
 }
 
 ::-webkit-scrollbar-track{
-    background-color:${({ theme }) => theme.colors.thirdcolor};
+    
 }
 
 ::-webkit-scrollbar-thumb{
     
-  background-color:#343e74;
+  background-color:${({ theme }) => theme.colors.grey_color};
     border:5px solid transparent;
     border-radius:10px;
+    cursor: pointer;
 }
 
 body{
-  background-color:${({ theme }) => theme.colors.topcolor};
+  background-color:${({ theme }) => theme.colors.dark_Black_color};
+  padding-top:10rem;
 }
 
 h1{
     font-size:5rem;
     font-weight:900;
-    color:black;
+    color:${({ theme }) => theme.colors.grey_color};
 }
 
 h2{
-    color:black;
+    color:${({ theme }) => theme.colors.grey_color};
     font-size:4.4rem;
+    font-weight:500;
     white-space: normal;
     text-align: center;
 
@@ -54,11 +57,11 @@ h3{
 }
 
 p{
-    color: black;
-    opacity: 0.7;
+    color:${({ theme }) => theme.colors.grey_color};
+    opacity: 0.9;
     font-size:1.65rem;
     line-height: 1.5;
-    font-weight:400;
+    font-weight:500;
 }
 
 a{
@@ -84,8 +87,14 @@ li{
     grid-template-columns: repeat(2,1fr);
 }
 
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .grid-four-column{
-    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
 }
 
 .common-heading{
@@ -97,10 +106,17 @@ li{
 
 input,textarea{
     display: block;
-    color: black;
+    color:${({ theme }) => theme.colors.dark_Black_color};
     padding: 1.6rem 2.4rem;
     font-family: 'Montserrat', sans-serif;
+    outline: none;
 }
+
+.common-inputs{
+    background-color:${({ theme }) => theme.colors.grey_color};
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 
 @media (max-width:${({ theme }) => theme.media.tab}) {
     
@@ -115,6 +131,12 @@ input,textarea{
     }
     .grid-two-column{
         grid-template-columns: 1fr;
+    }
+
+    .flex-center{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
     }
 }
 

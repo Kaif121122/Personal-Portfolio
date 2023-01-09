@@ -5,8 +5,8 @@ import { Button } from '../styles/Button'
 import { useGlobalContext } from '../context/context'
 const Wrapper = styled.section`
 
-padding: 5% 15%;
-background-color:${({ theme }) => theme.colors.topcolor};
+padding: 5%;
+background-color:${({ theme }) => theme.colors.dark_Black_color};
 
 .hero-comment-section{
     display: flex;
@@ -26,6 +26,7 @@ background-color:${({ theme }) => theme.colors.topcolor};
     margin-left: auto;
     cursor: pointer;
     transition:all 0.3s ease;
+    filter:grayscale(0.7)
 }
 
 .hero-img:hover{
